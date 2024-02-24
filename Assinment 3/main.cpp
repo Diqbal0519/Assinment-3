@@ -34,7 +34,6 @@ int main() {
         output_file(average, total_grade, inputFile);
         total_grade = 0;
         inputFile << "\n";
-        cout << "\n";
     }
     return 0;
 }
@@ -52,7 +51,7 @@ void input_file(ifstream& studentNames, ofstream& inFile, int& total_score){
     string name;
     getline(studentNames, name);
     n = num_quizzes_taken();
-    inFile << name << " ";
+    inFile << name;
     for(int i = 0; i < n; i++){
         score = quiz_score();
         inFile << " " << score;
